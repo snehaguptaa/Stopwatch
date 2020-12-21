@@ -1,0 +1,65 @@
+html {
+	background: url('https://cdn.pixabay.com/photo/2016/11/29/06/37/abstract-1867838_960_720.jpg');
+    background-size: cover;
+}
+*
+{
+	margin: 0px;
+	padding: 0px;
+}
+.main-body{
+	text-align: center;
+	margin-top: 25vh;
+}
+
+.heading{
+	font-family: 'Press Start 2P', cursive;
+	font-size: 2.5em;
+	padding-bottom: 1em;
+}
+.sub-heading{
+	text-align: center;
+	font-family: 'Playball', cursive;
+	font-size: 2em;
+}
+#theme, .select-theme{
+	font-family: 'Forum', cursive;
+	font-weight: bold;
+	margin-bottom: 5px;
+	font-size: 1.3em;
+}
+#theme{
+	text-align: center;
+}
+select{
+	background-color: black;
+	color: white;
+	border-radius: 3px;
+}
+
+.time{
+	margin: 1em 0 0.5em 0;
+	font-size: 2.5em;
+	font-family: 'Forum', cursive;
+	font-weight: bold;
+}
+button{
+	padding: 1.8em 2.8em;
+	font-family: 'Press Start 2P', cursive;
+    border-radius: 3px;
+    font-family: 'Press Start 2P', cursive;
+    box-shadow: 0 5px 9px #193047;
+    background-color: black;
+    color: white;
+}
+button:hover{
+    cursor: pointer;
+    background-color: white;
+    color: black;
+}
+#start{
+	margin-right: 4em;
+}
+#reset{
+	margin-left: 4em;
+}

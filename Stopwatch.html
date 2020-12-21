@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title>title</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" type="text/css" href="C:\Users\This-PC\Documents\New WP\JS\Vanilla JS\Stopwatch.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Forum&family=Playball&family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+
+<body>
+	<main class ="main-body">
+	<h2 class ="heading">Stopwatch</h2>
+	<h4 class ="sub-heading">Let's have fun</h4><br>
+	<!--
+	<div class="select-theme">
+		<label for="theme" class="select-theme">Choose a Theme:</label>
+			<select name="background" id="theme">
+			  <option value="crystal">Crystal</option>
+			  <option value="flower">Nature</option>
+			  <option value="sky">Night-Sky</option>
+			  <option value="abstract">Abstract</option>
+			  <option value="blur">Glitch</option>
+			</select>
+		</label>
+	</div>
+	-->
+	<p class = "time">
+		<span id="seconds">00</span>
+		:
+		<span id="tens">00</span>
+	</p>
+	<div id="btn">
+		<button id="start">START</button>
+		<button id="stop">STOP</button>
+		<button id="reset">RESET</button>
+	</div>
+	</main>
+	<script type="text/javascript">
+		window.onload = function () {
+  
+		var seconds = 00; 
+		var tens = 00; 
+		var appendTens = document.getElementById("tens")
+		var appendSeconds = document.getElementById("seconds")
+		var buttonStart = document.getElementById('start');
+        var buttonStop = document.getElementById('stop');
+		var buttonReset = document.getElementById('reset');
+		var Interval;
+		  
+		 buttonStart.onclick = function() {
+    
+			clearInterval(Interval);
+			Interval = setInterval(startTimer, 10);
+	  	}
+	  
+		buttonStop.onclick = function() {
+		    clearInterval(Interval);
+	    }
+	  
+
+	  	buttonReset.onclick = function() {
+			clearInterval(Interval);
+			tens = "00";
+			seconds = "00";
+			appendTens.innerHTML = tens;
+			appendSeconds.innerHTML = seconds;
+	    }
+	  
+	   
+	  
+	    function startTimer () {
+			tens++; 
+		
+			if(tens < 9){
+			  appendTens.innerHTML = "0" + tens;
+		    }
+		
+			if (tens > 9){
+			  appendTens.innerHTML = tens;
+		  
+		    } 
+		
+			if (tens > 99) {
+			  console.log("seconds");
+			  seconds++;
+			  appendSeconds.innerHTML = "0" + seconds;
+			  tens = 0;
+			  appendTens.innerHTML = "0" + 0;
+			}
+		
+			if (seconds > 9){
+			  appendSeconds.innerHTML = seconds;
+		    }  
+	  
+	    }
+
+  
+
+    }
+	</script>
+	
+</body>
+</html>
